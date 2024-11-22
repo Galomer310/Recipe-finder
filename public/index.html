@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Find Recipes</h1>
+    <form id="ingredients-form">
+        <input type="text" id="ingredients" placeholder="Enter ingredients" required>
+        <button type="submit">Search Recipes</button>
+    </form>
+
+    <div id="sensitivity-buttons">
+        <button class="sensitivity-button" data-sensitivity="dairy">Dairy</button>
+        <button class="sensitivity-button" data-sensitivity="gluten">Gluten</button>
+        <!-- Add more sensitivity buttons here -->
+    </div>
+
+    <div id="recipes"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
