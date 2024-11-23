@@ -33,7 +33,7 @@ router.post('/api/recipes', async (req, res) => {
                     apiKey: process.env.SPOONACULAR_API_KEY,
                     includeIngredients: ingredients.join(','),
                     intolerances: sensitivities.join(','),
-                    number: 50,
+                    number: 10,
                     offset: (page - 1) * 20, // Pagination offset
                     addRecipeInformation: true,
                     fillIngredients: true,
@@ -61,6 +61,7 @@ router.post('/api/recipes', async (req, res) => {
         res.status(500).json({ error: 'Error fetching recipes. Please try again later.' });
     }
 });
+
 
 // Route to get recipe history
 router.get('/api/history', (req, res) => {

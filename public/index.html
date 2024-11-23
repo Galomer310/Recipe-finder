@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Find Recipes</h1>
-    <form id="ingredients-form">
-        <input type="text" id="ingredients" placeholder="Enter ingredients" required>
+    <form id="recipe-form">
+        <label for="ingredients">Ingredients (comma separated):</label>
+        <input type="text" id="ingredients" name="ingredients" placeholder="e.g., chicken, tomato, basil" />
+    
+        <label for="sensitivities">Sensitivities:</label>
+        <div id="sensitivity-buttons">
+            <button type="button" data-value="gluten">Gluten Free</button>
+            <button type="button" data-value="dairy">Dairy Free</button>
+            <button type="button" data-value="vegetarian">Vegetarian</button>
+            <button type="button" data-value="vegan">Vegan</button>
+        </div>
+    
+        <label for="cuisine">Cuisine:</label>
+        <select id="cuisine" name="cuisine">
+            <option value="">Any</option>
+            <option value="italian">Italian</option>
+            <option value="chinese">Chinese</option>
+            <option value="mexican">Mexican</option>
+            <option value="indian">Indian</option>
+            <option value="thai">Thai</option>
+            <option value="french">French</option>
+            <option value="japanese">Japanese</option>
+        </select>
+    
         <button type="submit">Search Recipes</button>
     </form>
-
-    <div id="sensitivity-buttons">
-        <button class="sensitivity-button" data-sensitivity="dairy">Dairy</button>
-        <button class="sensitivity-button" data-sensitivity="gluten">Gluten</button>
-        <!-- Add more sensitivity buttons here -->
-    </div>
-
-    <div id="recipes"></div>
-
-    <script src="script.js"></script>
+    
+      <script src="script.js"></script>
 </body>
 </html>
